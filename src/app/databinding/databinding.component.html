@@ -1,0 +1,31 @@
+<div class="general">
+<p class="titulo">Ejemplos de Data Binding</p>
+  <div>
+  <p> {{'Hay ' + (2+3) + ' productos'}}</p>
+  <p> Hay {{productnumber}} productos</p>
+  <p> {{'Mi nombre es : '+ showmyName()}}</p>
+  <img src = "{{myimgsrc}}" width="150"/>
+  <hr />
+  <p [id]="mypid">Párrafo con id del componente</p>
+  <button type="'button" [disabled]="isDisabled">Push me: I do nothing</button>
+  <hr />
+  <div>El nombre del cliente es: {{clientName}}</div>
+  <button type="button" (click) = "clientName = 'Ana'">Change name</button>
+  <button type="button" (click) = "changeClientName()">Change name</button>
+  <hr />
+  <div>
+    <span>Otro nombre es: {{clientName }} </span>
+    <label> Nombre:
+      <input #otherName >
+    </label>
+    <button (click) = "clientName = otherName.value" >Chage name</button>
+  </div>
+  <hr />
+  <h4> Hay {{myamount}} productos</h4>
+  <form>
+    <label>¿Cuantos productos dices que hay?:
+      <input type="number" max="10" min="0" [(ngModel)] = "myamount" name="myamount"/>
+    </label>
+  </form>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="general">
+    <p class="titulo">Cliente REST sencillo</p>
+    <div>
+      <p class="bold">Consulta de una lista</p>
+      <p *ngFor="let aproduct of myProducts">{{aproduct.descripcion}} cuesta {{aproduct.precio}}€
+        y quedan {{aproduct.stock}}</p>
+    </div>
+    <hr/>
+    <div>
+      <p class="bold">Búsqueda de un producto</p>
+      <form>
+        Código de producto<input #thecode />
+        <button (click)="showProduct(thecode.value)">Busca producto</button>
+      </form>
+      <p *ngIf="found"> Producto: {{oneProduct.descripcion}} - Precio: {{oneProduct.precio}}€ -
+        Stock: {{oneProduct.stock}}</p>
+      <p *ngIf="!found && searched"> Código de producto no existente</p>
+    </div>
+
+    <div>
+      <p class="bold">Alta de un nuevo producto</p>
+      <form>
+        Código: <input type="text" [(ngModel)]="newProduct.id" name="nwcodp" />
+        Descripción: <input type="text" [(ngModel)]="newProduct.desc" name="nwdescripcion" />
+        Precio: <input type="number" [(ngModel)]="newProduct.price" name="nwprecio" />
+        Stock: <input type="number" [(ngModel)]="newProduct.stock" name="nwstock" />
+        <button (click)="addProduct()">Alta de producto</button>
+      </form>
+      <p *ngIf="aerror">An error has ocurred</p>
+    </div>
+    <p class="bold">Borrado de un producto</p>
+    <form>
+      Código de producto<input #oldproduct />
+      <button (click)="removeProduct(oldproduct.value)">Borra producto</button>
+    </form>
+</div>

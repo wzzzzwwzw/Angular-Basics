@@ -1,0 +1,9 @@
+<div class="general">
+  <hr/>
+  <p class="titulo">{{componentTitle}}</p>
+  <div>
+    <p *ngFor="let aproduct of (myProducts$ | async)">{{aproduct.descripcion}} cuesta {{aproduct.precio}}€
+      y quedan {{aproduct.stock}}</p>
+  </div>
+  <hr/>
+</div>

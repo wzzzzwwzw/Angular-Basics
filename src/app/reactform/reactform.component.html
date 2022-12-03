@@ -1,0 +1,23 @@
+<div class="general">
+  <div>
+    <p class="titulo">Ejemplo de formulario reactivo</p>
+  <br /><br />
+  <form (submit)="sendit(loginform)" [formGroup]="loginform" >
+    <div >
+      <label> Usuario:</label>
+      <input type='text'  name='username'
+             formControlName="username"
+             placeholder="Identificador de usuario"/>
+      <label> Clave:</label>
+      <input type="password" name='password'
+             formControlName="password"
+             placeholder="Clave" />
+    </div>
+    <br />
+    <div>
+      <button type="submit" [disabled] = "!loginform.valid"> Enviar </button>
+      <button type="reset" [disabled]="loginform.pristine">Reset</button>
+    </div>
+  </form>
+  </div>
+</div>

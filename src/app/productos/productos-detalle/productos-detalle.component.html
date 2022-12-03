@@ -1,0 +1,8 @@
+<div *ngIf ="prod" id="separa">
+  <br/>
+  Detalle: <br/>
+  <p> Producto: {{prod.descripcion}} - Precio: {{prod.precio}}€ -
+    Stock: {{prod.stock}}</p>
+  <button type="button" (click)="sendEvent(prod.descripcion)">Comprar</button>
+</div>
+

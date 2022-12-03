@@ -1,0 +1,36 @@
+<div class="general">
+  <p class="titulo">Ejemplos de directivas</p>
+  <img src = "../../assets/imgs/upmlogo.jpg" *ngIf = "showfirst" id="first" width="130"/>
+  <img src = "../../assets/imgs/upmlogo.jpg" *ngIf = "showsecond" id="second" width="130"/>
+  <hr/>
+  <div>
+    <p *ngFor="let teacher of teachers; let i = index">
+      {{teacher}} es el profesor número {{i}} del MiW
+    </p>
+  </div>
+  <hr/>
+  <ng-container *ngIf="showsecond">
+     Este elemento se ve por estar a {{showsecond}} la variable
+  </ng-container><br />
+  <hr/>
+  <select id="myteacher">
+    <ng-container *ngFor="let teacher of teachers">
+        <option value= {{teacher}}>{{teacher}} </option>
+    </ng-container>
+  </select>
+  <hr/>
+  <div [ngSwitch]="number">
+    <p *ngSwitchCase="0">El profesor es Santiago</p>
+    <p *ngSwitchCase="1">El profesor es Javier</p>
+    <p *ngSwitchCase="2">El profesor es Luis</p>
+    <p *ngSwitchDefault>No es un profesor conocido</p>
+  </div>
+  <hr/>
+  <label>Cantidad:
+    <input type="number" max="10" min="0" [(ngModel)] = "myamount" />
+  </label>
+<hr />
+  <p class="titulo">Ejemplos de creación personalizada de directivas de atributo</p>
+Este texto se ve afectado por <span appHighlight> la modificación de la directiva "highlight"</span>
+por figurar en la etiqueta html de la plantilla o template
+</div>

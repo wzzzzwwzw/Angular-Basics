@@ -1,0 +1,16 @@
+<div class="general">
+  <p class="titulo">Elementos observables</p>
+  <br /><br />
+  <div>
+    El primer participante lleva el número: {{player1.ticket}}<br />
+    <div *ngIf ="player1.winner == true">He ganado yo!!!</div>
+    El segundo participante lleva el número: {{player2.ticket}}<br />
+    <div *ngIf ="player2.winner == true">He ganado yo!!!</div>
+    <br /><hr /><hr />
+    El organizador saca el número: {{organizer.randomNumber}}<br />
+    Lleva generados: {{organizer.howmany}}
+    <hr />
+  </div>
+
+  <hr/>
+</div>

@@ -1,0 +1,14 @@
+<div class="general">
+      <hr/>
+      <p class="titulo">Conexión Componente/Subcomponente</p>
+      <div class="situado">
+        <ng-container *ngFor="let aproduct of myProducts">
+          <input type="radio" name="prod" (click)="selectProd(aproduct)"/>
+          Producto: {{aproduct.descripcion}}
+          <br />
+        </ng-container>
+        <ng-container *ngIf="appear" >¡¡Comprado el elemento {{proddesc}}!!</ng-container>
+        <hr/>
+        <app-productos-detalle [prod]="selectedProd" (myEvent) = "doeventalert($event)"></app-productos-detalle>
+      </div>
+</div>

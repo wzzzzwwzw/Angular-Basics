@@ -1,0 +1,28 @@
+<header class="navbar container-fluid">
+  <nav class="container-fluid" id="menu" >
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://www.upm.es" target="_nueva">
+        <img src='assets/imgs/upmlogo.jpg' id='upmlogo' class='bordes_redondos'></a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav"  >
+        <li><a routerLink="start" routerLinkActive="active">Inicio</a></li>
+        <li><a routerLink="databinding" routerLinkActive="active">Databinding</a></li>
+        <li><a routerLink="objectevent" routerLinkActive="active">$event</a></li>
+        <li><a routerLink="directivas" routerLinkActive="active">Directivas</a></li>
+        <li><a routerLink="pipes" routerLinkActive="active">Pipes</a></li>
+        <li><a routerLink="subcomponentes" routerLinkActive="active">Subcomponentes</a></li>
+        <li><a routerLink="rutas" routerLinkActive="active">Rutas</a></li>
+        <li><a routerLink="observable" routerLinkActive="active">Observables</a></li>
+        <li><a routerLink="eventos" routerLinkActive="active">Eventos</a></li>
+        <li><a routerLink="reactform" routerLinkActive="active">Formulario reactivo</a></li>
+        <li><a routerLink="httpServices" routerLinkActive="active">Conexión con servicios</a></li>
+        <li><a routerLink="asyncpipe" routerLinkActive="active">Pipe async</a></li>
+        <li><a routerLink="rest" routerLinkActive="active">Ejemplo Rest</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="container" id="contenedor">
+  <router-outlet></router-outlet>
+</section>

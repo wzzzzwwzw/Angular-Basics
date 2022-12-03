@@ -1,0 +1,14 @@
+<div class="general">
+  <div>
+    <p class="titulo">Ejemplos de pipes</p>
+    La cantidad de dinero es: {{ mymoney | currency:'€':'symbol':'1.0-2'}} <br />
+    El número original es: {{ mynumber }} <br />
+    El número con un decimal es: {{ mynumber | number:'1.0-1' }} <br />
+    La fecha es: {{ mymsseconds | date:'dd/MM/yyyy' }} <br />
+    El objeto json es: {{ myobject | json }} <br />
+    La cadena convertida a minúsculas: {{mystring | lowercase}} <br />
+    La cadena convertida a mayúsculas: {{mystring | uppercase}} <br />
+    La cadena convertida con "titlecase": {{mystring | titlecase}} <br />
+  </div>
+  <hr />  <hr />
+</div>
